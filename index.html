@@ -627,7 +627,6 @@ hover:after:w-full max-sm:text-sm"
         const faqItems = document.querySelectorAll('.faq-item');
         const faqQuestions = document.querySelectorAll('.faq-question');
 
-        // First FAQ open
         const firstItem = faqItems[0];
         const firstAnswer = firstItem.querySelector('.faq-answer');
         const firstIcon = firstItem.querySelector('.faq-icon');
@@ -637,13 +636,10 @@ hover:after:w-full max-sm:text-sm"
         firstAnswer.style.maxHeight = firstAnswer.scrollHeight + 'px';
         firstIcon.classList.add('rotate-180');
 
-        // First ke niche 20px gap
         if (firstItem.nextElementSibling) {
             firstItem.nextElementSibling.style.marginTop = '-6px';
         }
 
-
-        // FAQ click
         faqQuestions.forEach((button) => {
 
             button.addEventListener('click', () => {
@@ -654,8 +650,6 @@ hover:after:w-full max-sm:text-sm"
 
                 const isOpen = faqItem.classList.contains('active');
 
-
-                // Sab close
                 faqItems.forEach((item) => {
 
                     item.classList.remove('active');
@@ -669,8 +663,6 @@ hover:after:w-full max-sm:text-sm"
 
                 });
 
-
-                // Clicked FAQ open
                 if (!isOpen) {
 
                     faqItem.classList.add('active');
@@ -680,8 +672,6 @@ hover:after:w-full max-sm:text-sm"
 
                     icon.classList.add('rotate-180');
 
-
-                    // Open item ke niche 20px
                     const nextItem = faqItem.nextElementSibling;
 
                     if (nextItem) {
